@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /*ne pas oublier la hauteur*/
+}
+.cube {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+}
+.cube:hover {
+  border: 5px solid yellow;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.cube.selected {
+  background-color: yellow;
+}
+.selected:active {
+  animation-name: ciao;
+  animation-delay: 2s;
+}
+.cube {
+  animation-name: bigger;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  -webkit-animation-name: bigger;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+}
+  @-webkit-keyframes bigger {
+    0 {
+      transform: scale(none);
+    }
+    50% {
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+@-webkit-keyframes ciao {
+  0 {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transition: 
+  }
+}
